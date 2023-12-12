@@ -1,0 +1,381 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  /* height: 100vh;
+  width: 100%; */
+  background-image: url("minesweeper-bg.gif");
+  background-size: cover;
+  background-position: center;
+  cursor: url("UntitlednormalCursor(2).png"), auto;
+
+}
+
+#outer,
+#outer2,
+#outer3 {
+  /* margin: 50px auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  min-width: 603px;
+  /* border: 1px solid red; */
+  opacity: 0;
+  transition: 0.5s;
+  cursor: url("key 1keyy-game(1).png"), auto;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background-image: url("image\(1\).png");
+  background-size: cover;
+  background-position: center;
+}
+
+#outer2>.box {
+  width: 150px;
+  height: 150px;
+}
+
+#outer3>.box {
+  width: 120px;
+  height: 120px;
+
+}
+
+#wrapper {
+  width: 603px;
+  height: 603px;
+  margin: 30px auto;
+  /* background-image: url("wrapper-bg.jpg"); */
+  background-position: center;
+  background-size: contain;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  align-items: center; */
+  overflow: hidden;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: row;
+  transition: 0.3s;
+}
+
+.struct {
+  min-width: 603px;
+  height: 603px;
+  /* border: 1px solid blue; */
+
+}
+
+#intro {
+  background-image: url("intro-removebg-preview-transformed.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  transition: 0.2s;
+
+}
+
+.game-over {
+  width: 403px;
+  height: 403px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url("Game-over-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  position: fixed;
+  /* opacity: 0.5; */
+  top: 40%;
+  left: 39%;
+  display: none;
+  background-repeat: no-repeat;
+  z-index: 100;
+
+}
+
+.victory {
+  width: 600px;
+  height: 600px;
+  background-image: url("victory-removebg-preview_cleanup.png");
+  background-position: center;
+  background-size: cover;
+  top: 30%;
+  left: 35%;
+  position: fixed;
+  font-family: 'Luckiest Guy', cursive;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* cursor: pointer; */
+  cursor: url("UntitlednormalCursor(2).png"), auto;
+  z-index: 100;
+  display: none;
+
+}
+
+.restart {
+  font-size: 2rem;
+  margin: 10px;
+  margin-top: 35px;
+  color: #fde8b7;
+
+
+}
+
+.restart:active,
+.continue:active {
+  scale: calc(0.90);
+
+}
+
+.continue {
+  font-size: 2.5rem;
+  margin: 10px;
+  margin-top: 418px;
+  color: #fde8b7;
+}
+
+
+.e {
+  margin: -30px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 15%;
+  /* border: 2px solid black; */
+}
+
+.ee {
+  width: 40%;
+  height: 80%;
+  background-image: url("quite-button-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.ex {
+  width: 40%;
+  height: 80%;
+  /* background-color: black; */
+  background-image: url("images-removebg-preview.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+input {
+  font-size: 2rem;
+  padding: 2rem;
+  /* margin-left: 1.5rem; */
+  background: none;
+  border: none;
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.name {
+  margin-top: 200px;
+  margin-left: 10px;
+  /* border: 2px solid white; */
+
+}
+
+.ex:active,
+.ee:active {
+  scale: calc(0.90);
+}
+
+.struct {
+  background-image: url("bg-cover-2_cleanup-removebg-preview.png");
+  background-position: bottom;
+  background-size: cover;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.ddd {
+  margin: 49px;
+  text-align: center;
+  /* border: 2px solid black; */
+  margin-top: 20px;
+  /* cursor: pointer; */
+  cursor: url("UntitlednormalCursor(2).png"), auto;
+  color: #300c0a;
+}
+
+.ddd:active {
+  scale: calc(0.90);
+}
+
+.ddd:hover {
+  color: #c54a4c;
+
+}
+
+.Easy {
+  padding-top: 8px;
+}
+
+.back-button {
+  /* border: 2px solid yellow; */
+  width: 150px;
+  height: 100px;
+  background-image: url("back-button-removebg-preview.png");
+  background-position: center;
+  background-size: cover;
+  margin-top: -50px;
+  margin-left: 500px;
+  opacity: 0;
+
+}
+
+.back-button:active {
+  scale: calc(0.90);
+}
+
+.collections {
+  width: 300px;
+  /* height: 500px; */
+  /* text-align:left; */
+  /* background-color: purple; */
+  /* margin-top: -900px;
+  margin-left: 1400px; */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items:space-between; */
+  /* border:2px solid red; */
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: left;
+
+}
+
+.playerid,
+.timmer,
+.coim {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Luckiest Guy', cursive;
+  /* border:2px solid green; */
+}
+
+.playerid>img {
+  width: 90px;
+  height: 90px;
+  /* padding-left: 15px; */
+  /* border:2px solid red; */
+}
+
+.timmer>img,
+.coim>img {
+  width: 90px;
+  height: 90px;
+  /* border:2px solid red; */
+  /* padding-left: 15px; */
+}
+
+.welcome {
+  /* width: 100px;
+  height: 100px; */
+  margin-top: -40px;
+  margin-left: 600px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  color: #fceec9;
+  opacity: 0;
+
+}
+
+.clrrr {
+  color: yellow;
+}
+
+#wel {
+  color: #ca9642;
+}
+
+.playerid {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* font-size: 2.5rem; */
+  font-family: 'Luckiest Guy', cursive;
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: url("varnished_wood.jpg");
+  background-position: top;
+  background-size: cover;
+
+}
+
+.coim {
+  display: flex;
+  /* /* justify-content: space-evenly; */
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: 'Luckiest Guy', cursive;
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: url("varnished_wood.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+.status {
+  /* margin: 50px; */
+  text-align: center;
+  /* color: #c54a4c;*/
+  width: 100%;
+  height: 30%;
+}
+
+.timmer {
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: 'Luckiest Guy', cursive;
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: url("varnished_wood.jpg");
+  background-position: top;
+  background-size: cover;
+}
